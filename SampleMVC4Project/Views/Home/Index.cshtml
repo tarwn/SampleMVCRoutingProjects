@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>/Home/Index</h2>
+
+@Html.ActionLink("/Home/Index", "Index") - @Url.Action("Index") - Action=Index<br />
+@Html.ActionLink("/Home/Other", "Other") - @Url.Action("Other") - Action=Other<br />
+@Html.ActionLink("/Home/Redirect", "Redirect") - @Url.Action("Redirect") - Action=Redirect<br />
+@Html.ActionLink("/Admin/Home/Index", "Index", new { Area = "Admin" }) - @Url.Action("Index", new { Area = "Admin" }) - Action=Index, new { Area=Admin }<br />
+@Html.ActionLink("/Admin/Home/Other", "Other", "Home", new { Area = "Admin" }, null) - @Url.Action("Other", "Home", new { Area = "Admin" }) - Action=Other, Controller=Home, new { Area=Admin }<br />
+@Html.ActionLink("/Admin/Home/Redirect", "Redirect", "Home", new { Area = "Admin" }, null) - @Url.Action("Redirect", "Home", new { Area = "Admin" }) - Action=Redirect, Controller=Home, new { Area=Admin }<br />
